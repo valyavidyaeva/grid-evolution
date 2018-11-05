@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Методы построения сеток</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Методы построения сеток: от ужасного к прекрасному</h1>
+        <p>Видяева Валентина, hajs#4</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Методы построения сеток: от ужасного к прекрасному</h2>
+        <p>Видяева Валентина, hajs#4</p>
+        <img class="cover" src="pictures/grid.jpg" alt="Photoshop grid">
+        <style>
+            #cover img {
+                width: 100%;
+                height: 100%;
+            }
+            #cover h2 {
+                margin:100px 0 0;
+                color:#00695c;
+                text-align:center;
+                font-size:70px;
+                }
+            #cover p {
+                margin:10px 0 0;
+                text-align:center;
+                color:#00695c;
+                font-style:italic;
+                font-size:20px;
+                }
+        </style>
+    </section>
+
+    <section class="slide" id="iframe">
+        <iframe src="http://info.cern.ch/hypertext/WWW/TheProject.html" frameborder="0" width="100%" height="100%"></iframe>
+        <div class="date">6 августа 1991 г.</div>
+        <style>
+            #iframe{
+                padding-top: 56px;
+            }
+            #iframe .date{
+                position: absolute;
+                bottom: 80px;
+                right: 100px;
+                color: #00695c;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Таблицы</h2>
+    </section>
+
+    <section class="slide" id="demo1">
+        <p>Fusce vitae placerat massa. Sed luctus, risus nec dapibus interdum.</p>
+        <table>
+            <tr>
+                <td>Mauris cursus ultrices rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit odio, molestie non dolor eget, semper dapibus est. Sed condimentum consequat mauris. Praesent commodo fermentum erat non pellentesque.</td>
+        
+                <td>Nulla nulla sem, rutrum ut diam eget, feugiat rhoncus sem. Vestibulum iaculis eleifend lectus, vitae vulputate tortor lacinia id. Cras in neque aliquet, pulvinar mauris eget, varius ipsum. </td>
+            </tr>
+        </table>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae, Curabitur gravida urna sit amet mauris tempus rutrum.</p>
+        <style>
+            #demo1 p {
+                line-height: 1.3;
+            }
+            #demo1 td{
+                width: 50%;
+                color: #00695c;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+            #demo1 td:first-of-type{
+                padding-right: 30px;
+            }
+            #demo1 td:last-of-type{
+                padding-left: 30px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo1-code">
+        <pre>
+            <code>&lt;p&gt;...&lt;/p&gt;</code>
+            <code>&lt;table&gt;</code>
+            <code>    &lt;tr&gt;</code>
+            <code>        &lt;td&gt;...&lt;/td&gt;</code>
+            <code>        &lt;td&gt;...&lt;/td&gt;</code>
+            <code>    &lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+            <code>&lt;p&gt;...&lt;/p&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide" id="demo2">
+        <table class="header">
+            <tr>
+                <td>header</td>
+            </tr>
+        </table>
+        <table class="content">
+            <tr>
+                <td>
+                    <table class="aside">
+                        <tr>
+                            <td>aside</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="main">
+                        <tr>
+                            <td>main</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="footer">
+            <tr>
+                <td class="footer__block">footer</td>
+            </tr>
+        </table>
+
+        <style>
+            #demo2 table{
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+            #demo2 td {
+                padding: 0;
+                text-align: center;
+                color: #fff;
+                font-size: 1.5em;
+            }
+            #demo2 .header{
+                margin-bottom: 20px;
+                background-color: #26A69A
+            }
+            #demo2 .content td{
+                height: 200px;
+                vertical-align: middle;
+            }
+            #demo2 .aside,
+            #demo2 .main{
+                background-color: #80CBC4;
+            }
+            #demo2 .content td:first-of-type{
+                width: 30%;
+                padding-right: 20px;
+            }
+            #demo2 .content td:last-of-type{
+                width: 70%;
+            }
+            #demo2 .footer {
+                margin-top: 20px;
+                background-color: #26A69A;
+                width: 100%;
+                height: 100px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo2-code">
+        <pre>
+            <code>&lt;table class="header"&gt;</code>
+            <code>    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+            <code>&lt;table class="content"&gt;</code>
+            <code>    &lt;tr&gt;</code>
+            <code>        &lt;td&gt;</code>
+
+            <code>            &lt;table class="aside"&gt;</code>
+            <code>                &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>            &lt;/table&gt;</code>
+            <code>        &lt;/td&gt;</code>
+
+            <code>        &lt;td&gt;</code>
+            <code>            &lt;table class="main"&gt;</code>
+            <code>                &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>            &lt;/table&gt;</code>
+            <code>        &lt;/td&gt;</code>
+            <code>    &lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+            <code>&lt;table class="footer"&gt;</code>
+            <code>    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+        </pre>
+
+        <style>
+            #demo2-code code {
+                font-size: 24px;
+                line-height: 1.1;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo2-big-code">
+        <pre>
+            <code>&lt;table&gt;</code>
+            <code>    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+            <code>&lt;table "&gt;</code>
+            <code>    &lt;tr&gt;</code>
+            <code>        &lt;td&gt;</code>
+
+            <code>            &lt;table&gt;</code>
+            <code>                &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>            &lt;/table&gt;</code>
+            <code>        &lt;/td&gt;</code>
+
+            <code>        &lt;td&gt;</code>
+            <code>            &lt;table&gt;</code>
+            <code>                &lt;tr&gt;&lt;td&gt;</code>
+            <code>                    &lt;table cellpadding="0" cellspacing="0" width="100%" align="center"&gt;</code>
+            <code>                        &lt;tbody&gt;</code>
+            <code>                            &lt;tr&gt;</code>
+            <code>                                &lt;td&gt;</code>
+            <code>                                    &lt;table cellpadding="0" cellspacing="0" border="0" align="center" width="100%"&gt;</code>
+            <code>                                        &lt;tr&gt;</code>
+            <code>                                            &lt;td width="50%" valign="top"&gt;</code>
+            <code>                                                &lt;table cellspacing="1" cellpadding="5" border="0" align="center" width="100%"&gt;</code>
+            <code>                                                    &lt;thead&gt;</code>
+            <code>                                                        &lt;tr&gt;</code>
+            <code>                                                            &lt;td colspan="3"&gt;...&lt;/td&gt;</code>
+            <code>                                                        &lt;/tr&gt;</code>
+            <code>                                                    &lt;/thead&gt;</code>
+            <code>                                                &lt;/table&gt;</code>
+            <code>                                            &lt;/td&gt;</code>
+            <code>                                        &lt;/tr&gt;</code>
+            <code>                                    &lt;/table&gt;</code>
+            <code>                                &lt;/td&gt;</code>
+            <code>                            &lt;/tr&gt;</code>
+            <code>                        &lt;/tbody&gt;</code>
+            <code>                    &lt;/table&gt;</code>
+            <code>                &lt;/td&gt;&lt;/tr&gt;</code>
+            <code>            &lt;/table&gt;</code>
+            <code>        &lt;/td&gt;</code>
+            <code>    &lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+            <code>&lt;table&gt;</code>
+            <code>    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>
+            <code>&lt;/table&gt;</code>
+
+        </pre>
+
+        <style>
+        #demo2-big-code {
+            padding-top: 36px;
+            font-size: 8px;
+            line-height: 1.1;
+        }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Float</h2>
+    </section>
+
+    <section class="slide" id="demo3">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float1.jpg" alt="">
+                    <p>Nut diam eget festibulum iaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float2.jpg" alt="">
+                    <p>Nulla nulla sem.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float3.jpg" alt="">
+                    <p>Feugiat rhoncus sem.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .row::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .item {
+                width: calc(33% - 20px);
+                float: left;
+                margin: 10px;
+            }
+            .item p {
+                line-height: 1.2;
+            }
+            .item img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo4">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float5.jpg" alt="">
+                    <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float1.jpg" alt="">
+                    <p>Nut diam eget festibulum iaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float2.jpg" alt="">
+                    <p>Nulla nulla sem.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float3.jpg" alt="">
+                    <p>Feugiat rhoncus sem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="demo5">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float5.jpg" alt="">
+                    <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float1.jpg" alt="">
+                    <p>Nut diam eget festibulum iaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float2.jpg" alt="">
+                    <p>Nulla nulla sem.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float3.jpg" alt="">
+                    <p>Feugiat rhoncus sem.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            #demo5 .container {
+                zoom: 0.5;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo5-code">
+        <pre>
+            <code>&lt;div class="container"&gt;</code>
+            <code>    &lt;div class="row"&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;/div&gt;</code>
+            <code>    &lt;div class="row"&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;/div&gt;</code>
+            <code>&lt;/div&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide" id="demo6">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float5.jpg" alt="">
+                    <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float1.jpg" alt="">
+                    <p>Nut diam eget festibulum ipsum dolor sit amet, consectetur adipisci ipsum dolor sit amet, consectetur adipisciiaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float2.jpg" alt="">
+                    <p>Nulla nulla sem .</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float3.jpg" alt="">
+                    <p>Feugiat rhoncus sem.</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            #demo6 {
+                padding-top: 56px;
+            }
+            #demo6 .container {
+                width: 50%;
+                margin: auto;
+                zoom: 0.8;
+                font-size: 14px;
+            }
+            #demo6 .item {
+                width: calc(50% - 20px);
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Inline-block</h2>
+    </section>
+
+    <section class="slide" id="demo7">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <img src="pictures/float5.jpg" alt="">
+                    <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float1.jpg" alt="">
+                    <p>Nut diam eget festibulum ipsum dolor sit amet, consectetur adipisci ipsum dolor sit amet, consectetur adipisciiaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/float2.jpg" alt="">
+                    <p>Nulla nulla sem .</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            #demo7 .container {
+                font-size: 0;
+            }
+            #demo7 .item {
+                display: inline-block;
+                vertical-align: top;
+                width: 33%;
+                float: none;
+                padding: 20px;
+                margin: 0;
+                font-size: 25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo8">
+        <div class="container">
+            <div class="item">
+                <img src="pictures/float5.jpg" alt="">
+                <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum.</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float1.jpg" alt="">
+                <p>Nut diam eget festibulum ipsum dolor sit amet, consectetur adipisci ipsum dolor sit amet, consectetur adipisciiaculis.</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float2.jpg" alt="">
+                <p>Nulla nulla sem .</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float4.jpg" alt="">
+                <p>Nulla nulla sem .</p>
+            </div>
+        </div>
+        <style>
+            #demo8 .container {
+                font-size: 0;
+            }
+            #demo8 .item {
+                display: inline-block;
+                width: 25%;
+                vertical-align: middle;
+                float: none;
+                padding: 20px;
+                margin: 0;
+                font-size: 25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo9">
+        <div class="container">
+            <div class="item">
+                <img src="pictures/float5.jpg" alt="">
+                <p>Feugiat rhoncus sem. Mauris cursus ultrices rutrum.</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float1.jpg" alt="">
+                <p>Nut diam eget festibulum ipsum dolor sit amet, consectetur adipisci ipsum dolor sit amet, consectetur adipisciiaculis.</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float2.jpg" alt="">
+                <p>Nulla nulla sem .</p>
+            </div>
+            <div class="item">
+                <img src="pictures/float4.jpg" alt="">
+                <p>Nulla nulla sem .</p>
+            </div>
+        </div>
+        <style>
+            #demo9 {
+                padding-top: 56px;
+            }
+            #demo9 .container {
+                width: 50%;
+                zoom: 0.5;
+                margin: auto;
+                font-size: 0;
+            }
+    
+            #demo9 .item {
+                display: inline-block;
+                width: 50%;
+                vertical-align: top;
+                float: none;
+                padding: 20px;
+                margin: 0;
+                font-size: 22px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo9-code_html">
+        <h2>HTML</h2>
+        
+        <pre>
+            <code>&lt;div class="container"&gt;</code>
+            <code>    &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>&lt;/div&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide" id="demo9-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>.container {</code>
+            <code>    font-size: 0;</code>
+            <code>}</code>
+    
+            <code>.item {</code>
+            <code>    display: inline-block;</code>
+            <code>    width: 50%;</code>
+            <code>    padding: 20px;</code>
+            <code>    vertical-align: top;</code>
+            <code>}</code>
+        </pre>
+        <style>
+            #demo9-code_css code{
+                font-size: 22px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Flexbox</h2>
+    </section>
+
+    <section class="slide" id="demo10">
+        <div class="container">
+            <aside>
+                <ul>
+                    <li>Итальянская</li>
+                    <li>Американская</li>
+                    <li>Вегетарианская</li>
+                </ul>
+            </aside>
+            <main>
+                <div class="item">
+                    <img src="pictures/pizza1.jpg" alt="">
+                    <p>Nulla nulla sem</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/pizza2.jpg" alt="">
+                    <p>Vestibulum iaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/pizza3.jpg" alt="">
+                    <p>Rugiat rhoncus</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/pizza4.jpg" alt="">
+                    <p>Nurutrum vitae</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/pizza5.jpg" alt="">
+                    <p>Egetibulum iaculis.</p>
+                </div>
+                <div class="item">
+                    <img src="pictures/pizza6.jpg" alt="">
+                    <p>eleifend lectus</p>
+                </div>
+            </main>
+        </div>
+        <style>
+            #demo10 {
+                padding: 96px 50px 0;
+            }
+    
+            #demo10 .container {
+                display: flex;
+                align-items: flex-start;
+            }
+    
+            #demo10 aside {
+                width: calc(30% - 20px);
+                margin-right: 20px;
+            }
+    
+            #demo10 main {
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+    
+            #demo10 .item {
+                width: calc(25% - 20px);
+                margin: 10px;
+                box-shadow: 0px 0px 6px #ccc;
+            }
+    
+            #demo10 img {
+                width: 100%;
+                margin: 10px auto;
+                display: block;
+            }
+    
+            #demo10 aside {
+                background-color: #EFFBF0;
+                border-radius: 10px;
+            }
+    
+            #demo10 ul {
+                padding: 30px 20px;
+                list-style-type: none;
+            }
+    
+            #demo10 li {
+                margin-bottom: 15px;
+                list-style-type: none;
+                font-size: 1.2em;
+                text-indent: unset;
+            }
+            #demo10 li:before {
+                content: none
+            }
+    
+            #demo10 li:last-of-type {
+                margin-bottom: 0;
+            }
+    
+            #demo10 main {
+                font-size: 0.9em;
+            }
+    
+            #demo10 .item {
+                box-shadow: 0px 0px 6px #D7CCC8;
+            }
+    
+            #demo10 p {
+                padding: 10px;
+                margin: 0;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo10-code_html">
+        <h2>HTML</h2>
+        <pre>
+            <code>&lt;div class="container"&gt;</code>
+            <code>    &lt;aside&gt;...&lt;/aside&gt;</code>
+            <code>    &lt;main&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>        &lt;div class="item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;/main&gt;</code>
+            <code>&lt;/div&gt;</code>
+        </pre>
+        <style>
+            #demo10-code_html {
+                padding-top: 56px;
+            }
+        </style>
+    </section>
+    
+    <section class="slide" id="demo10-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>.container {</code>
+            <code>    display: flex;</code>
+            <code>    align-items: flex-start;</code>
+            <code>}</code>
+            <code>aside {</code>
+            <code>    width: calc(30% - 20px);</code>
+            <code>}</code>
+            <code>main {</code>
+            <code>    width: 70%;</code>
+            <code>    display: flex;</code>
+            <code>    flex-wrap: wrap;</code>
+            <code>}</code>
+            <code>.item {</code>
+            <code>    width: calc(25% - 20px);</code>
+            <code>}</code>
+        </pre>
+        <style>
+            #demo10-code_css {
+                padding-top: 56px;
+            }
+            #demo10-code_css code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/flex-support.jpg" alt="" class="cover">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Grid layout</h2>
+    </section>
+
+    <section class="slide" id="demo11">
+        <div class="grid">
+            <div class="grid-item">grid item</div>
+            <div class="grid-item">grid item</div>
+            <div class="grid-item">grid item</div>
+            <div class="grid-item">grid item</div>
+            <div class="grid-item">grid item</div>
+            <div class="grid-item">grid item</div>
+        </div>
+        <style>
+            #demo11 .grid {
+                padding-top: 35px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1em;
+            }
+    
+            #demo11 .grid-item {
+                border: 5px solid #26A69A;
+                padding: 25px 0;
+                text-align: center;
+                border-radius: 25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo11-code_html">
+        <h2>HTML</h2>
+        <pre>
+            <code>&lt;div class="grid"&gt;</code>
+            <code>    &lt;div class="grid-item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="grid-item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="grid-item"&gt;&lt;/div&gt;</code>
+            <code>    &lt;div class="grid-item"&gt;&lt;/div&gt;</code>
+            <code>&lt;/div&gt;</code>
+        </pre>
+    </section>
+    
+    <section class="slide" id="demo11-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>.grid {</code>
+            <code>    display: grid;</code>
+            <code>    grid-template-columns: 1fr 1fr;</code>
+            <code>    grid-gap: 1em;</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide" id="demo12">
+        <div class="container">
+            <aside>
+                <ul>
+                    <li>Итальянская</li>
+                    <li>Американская</li>
+                    <li>Вегетарианская</li>
+                </ul>
+            </aside>
+            <main>
+                <div class="grid-item">
+                    <img src="pictures/pizza1.jpg" alt="">
+                    <p>Nulla nulla sem</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pictures/pizza2.jpg" alt="">
+                    <p>Vestibulum iaculis.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pictures/pizza3.jpg" alt="">
+                    <p>Rugiat rhoncus</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pictures/pizza4.jpg" alt="">
+                    <p>Nurutrum vitae</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pictures/pizza5.jpg" alt="">
+                    <p>Egetibulum iaculis.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="pictures/pizza6.jpg" alt="">
+                    <p>eleifend lectus</p>
+                </div>
+            </main>
+        </div>
+        <style>
+
+            #demo12 .container {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-gap: 1.5em;
+            }
+            #demo12 main {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1em;
+            }
+            #demo12 aside{
+                margin-right: 0px;
+            }
+
+            #demo12 ul {
+                background-color: #EFFBF0;
+                border-radius: 10px;
+                padding: 30px 20px;
+            }
+            #demo12 li {
+                text-indent: unset;
+                margin-bottom: 15px;
+                list-style-type: none;
+                font-size: 1.2em;
+            }
+            #demo12 li:before{
+                content: none;
+            }
+            #demo12 main {
+                font-size: 0.9em;
+            }
+            #demo12 img{
+            max-width: 100%;
+            height: 100px;
+            margin: 10px auto;
+            display: block;
+            }
+            #demo12 p {
+            padding: 10px;
+            margin: 0;
+            line-height: 1.1;
+            }
+            #demo12 .grid-item {
+            text-align: center;
+            font-size: 1.2em;
+            box-shadow: 0px 0px 6px #D7CCC8;
+            border-radius: 15px
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo12-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>.container {</code>
+            <code>    display: grid;</code>
+            <code>    grid-template-columns: 1fr 3fr;</code>
+            <code>    grid-gap: 1.5em;</code>
+            <code>}</code>
+            <code>main {</code>
+            <code>    display: grid;</code>
+            <code>    grid-template-columns: repeat(3, 1fr);</code>
+            <code>    grid-gap: 1em;</code>
+            <code>}</code>
+        </pre>
+        <style>
+            #demo12-code_css {
+                font-size: 22px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo13-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>.grid{</code>
+            <code>    display: grid;</code>
+            <code>    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code>
+            <code>}</code>
+        </pre>
+        <style>
+            #demo13-code_css {
+                font-size: 23px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/grid-autofit.gif" alt="" class="cover">
+    </section>
+
+    <section class="slide">
+        <img src="pictures/grid-support.jpg" alt="" class="cover">
+    </section>
+
+    <section class="slide" id="demo10-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+                <code>.container {</code>
+                <code>    display: flex;</code>
+                <code>    align-items: flex-start;</code>
+                <code>}</code>
+                <code>aside {</code>
+                <code>    width: calc(30% - 20px);</code>
+                <code>}</code>
+                <code>main {</code>
+                <code>    width: 70%;</code>
+                <code>    display: flex;</code>
+                <code>    flex-wrap: wrap;</code>
+                <code>}</code>
+                <code>.item {</code>
+                <code>    width: calc(25% - 20px);</code>
+                <code>}</code>
+            </pre>
+        <style>
+            #demo10-code_css {
+                padding-top: 56px;
+            }
+    
+            #demo10-code_css code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo12-code_css">
+        <h2>CSS</h2>
+    
+        <pre>
+            <code>@supports (display: grid){</code>
+            <code>    .container {</code>
+            <code>        display: grid;</code>
+            <code>        grid-template-columns: 1fr 3fr;</code>
+            <code>        grid-gap: 20px;</code>
+            <code>    }</code>
+            <code>    main {</code>
+            <code>        display: grid;</code>
+            <code>        grid-template-columns: repeat(3, 1fr);</code>
+            <code>        grid-gap: 20px;</code>
+            <code>    }</code>
+            <code>}</code>
+        </pre>
+        <style>
+            #demo12-code_css {
+                padding-top: 56px;
+            }
+            #demo12-code_css {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+
+    <section class="slide link">
+        <p><a href="http://css-live.ru/">css-live.ru</a></p>
+        <p><a href="https://css-tricks.com/">css-tricks.com</a></p>
+        <p><a href="https://2017.fullstackfest.com/">2017.fullstackfest.com</a></p>
+    </section>
+
+    <section class="slide link">
+        <p><a href="https://codepen.io/andybarefoot/full/MERBPx/">Isometric CSS Grid experiment in three planes</a></p>
+        <p><a href="https://codepen.io/andybarefoot/full/wrXvLj/">Using CSS Grid as a mask</a></p>
+        <p><a href="https://codepen.io/coreybruyere/pen/VMVaqM?editors=1100">CSS Grid Keyboard</a></p>
+    </section>
+
+    <style>
+        .link {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0;
+            font-size: 1.3em;
+        }
+        .link a {
+            color: #4DB6AC;
+        }
+    </style>
+
+    <section class="slide link-list">
+        <h2>Полезные ссылки в изучении CSS Grid</h2>
+            <p><a href="https://www.w3.org/TR/css-flexbox-1/">Спецификация - CSS Flexible Box Layout Module Level 1 </a></p>
+            <p><a href="http://css-live.ru/css/bolshaya-statya-pro-gridy-css-grid-layout.html">Большая статья про гриды Ильи Стрельцына</a></p>
+            <p><a href="http://telegra.ph/Kak-bystro-sproektirovat-sajt-s-pomoshchyu-CSS-Grid-12-04">Как быстро спроектировать сайт с помощью CSS Grid (оригинал)</a></p>
+            <p><a href="https://www.smashingmagazine.com/2017/10/naming-things-css-grid-layout/">Именование линий и областей в гридах, Рейчел Эндрю</a></p>
+            <p><a href="https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/">Подводные камни CSS Grid. Рейчел Эндрю</a></p>
+            <p><a href="https://mozilladevelopers.github.io/playground/css-grid">Введение в CSS Grid Layout в десяти простых шагах от Mozilla</a></p>
+    </section>
+    <style>
+        .link-list p{
+            margin-bottom: 10px;
+        }
+        
+        .link-list a {
+            color: #4DB6AC;
+        }
+    </style>
+
+    <section class="slide">
+        <h2 class="shout">Спасибо!</h2>
+    </section>
+
+
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
