@@ -2,3 +2,6 @@
 ## Доклад об эволюции методов построения сетки для митапа HaJS №4
 
 Таблицы -> Float -> Inline-block -> Flexbox -> Grid
+
+
+Презентация подготовлена с помощью [Shower](https://github.com/shower/shower)
